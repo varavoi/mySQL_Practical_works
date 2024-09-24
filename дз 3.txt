@@ -1,0 +1,38 @@
+﻿В качестве ответа можете присылать код запроса или результат
+
+Ипортировать БД world и:
+- Выведите все данные таблицы city
+Ответ:
+SELECT * FROM `city`;
+
+- Выведите все данные таблицы country, отсортированные по имени в обратном порядке
+Ответ:
+SELECT * FROM `country` ORDER BY `name` DESC;
+
+- Выведите страны с самой большой и самой маленькой площадью (SurfaceArea)
+с самой большой площадью, ОТВЕТ:
+SELECT * FROM `country` ORDER BY `SurfaceArea` DESC;
+
+с самой маленькой площадью, ОТВЕТ:
+SELECT * FROM `country` ORDER BY `SurfaceArea`;
+
+- Выведите все города с населением более 5 миллионов
+Ответ:
+SELECT * FROM `city` WHERE `Population`>5000000;
+
+- Выведите всех языков, на которых говорят в Китае (CountryCode 'CHN')
+Ответ:
+SELECT * FROM `countrylanguage` WHERE `CountryCode` = 'CHN';
+
+- Добавьте новый столбец "Government" в таблицу "Country", тип строковый 255 символов
+Ответ:
+ALTER TABLE `country` ADD COLUMN `Government` varchar(255);
+
+- Переименуйте столбец "Name" в таблице "City" на "CityName"
+Ответ:
+ALTER TABLE `city` RENAME COLUMN `Name` TO `cityName`;
+
+- Удалите столбец Region из таблицы стран
+Ответ:
+ALTER TABLE `country`
+DROP COLUMN `Region`;
